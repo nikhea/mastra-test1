@@ -17,11 +17,11 @@ import { comicAgent } from "./agents/comic-agent";
 import { finTechBranchWorkflow } from "./workflows/finitech-branch-workflow";
 import { finTechWorkflowParallel } from "./workflows/finitech-paralle-workflow";
 
-import { qdrant, rag } from "./rag/create.rag";
-import { ragAgent } from "./agents/rag-agent";
+// import { qdrant, rag } from "./rag/create.rag";
+// import { ragAgent } from "./agents/rag-agent";
 import { MastralAgent } from "./agents/doc-agent";
 
-rag();
+// rag();
 export const mastra = new Mastra({
   workflows: {
     weatherWorkflow,
@@ -39,10 +39,10 @@ export const mastra = new Mastra({
     polishTranslationAgent,
     yourbaTranslationAgent,
     comicAgent,
-    ragAgent,
+    // ragAgent,
     MastralAgent,
   },
-  vectors: { qdrant },
+  // vectors: { qdrant },
   storage: new LibSQLStore({
     url: ":memory:",
   }),
